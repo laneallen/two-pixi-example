@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- basic meta -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <!-- site properties -->
+  <title>twoPixi</title>
+  <meta name="description" content="Experimenting with two.js to load svg content, render it, then load into pixi.js.">
+
+  <!-- site config -->
+  <link rel="stylesheet" href="css/main.css">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+    }
+    /* hide the svg content to be rendered */
+    .hideSVGContent {
+      display: none;
+    }
+  /*
+    .renderView {
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  */
+  </style>
+
+  <script src="js/modernizr-2.6.2.min.js"></script>
+</head>
+<body>
+
+  <!-- using two.js, render the svg content in a hidden canvas for pulling into pixi.js -->
+  <svg class="hideSVGContent" id="renderSVG" width="200px" height="200px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+    <g>
+      <path d="M100,0C155.228,0 200,44.7715 200,100C200,155.228 155.228,200 100,200C44.7715,200 0,155.228 0,100C0,44.7715 44.7715,0 100,0Z" style="fill:rgb(235,235,235);"/>
+    </g>
+  </svg>
+
+
+  <!-- scripts -->
+
+  <!-- note: this two.min.js file loads underscore and backbone for events, use clean if you're already using those -->
+  <script src="js/two.min.js"></script>
+  <script src="js/pixi.dev.js"></script>
+  <script src="js/pixi.js"></script>
+  <script src="js/stats.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- analytics -->
+  <script>
+  /*
+    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+    e.src='//www.google-analytics.com/analytics.js';
+    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+    ga('create','UA-XXXXX-X');ga('send','pageview');
+  */
+  </script>
+
+</body>
+</html>
